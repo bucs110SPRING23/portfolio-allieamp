@@ -8,4 +8,4 @@ print(10%15)
 print(10%10)
 print(0%10)
 print(10 / 15)
-##Line 10 is wrong becasue it cuts off 0.66 prepeating but it cuts it off becasue its not worth the memory##
+##Line 10 is wrong becasue the answer is 0.66 prepeating but it cuts it off becasue its not worth the memory##
