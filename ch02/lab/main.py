@@ -19,8 +19,8 @@ jack.setpos(-100,20)
 tina.setpos(-100,-20)
 jack.down()
 tina.down()
-jack.forward(75)
-tina.forward(75)
+jack.forward(20)
+tina.forward(20)
 jack.setpos(-100,20)
 tina.setpos(-100,-20)
 
@@ -43,21 +43,24 @@ window.exitonclick()
 
 window = pygame.display.set_mode()
 points = []
+num_side = 3
 side_length = int(50)
 xpos = int(100)
 ypos = int(100)
 window.fill("white")
-for s in [3,4,6,20,100,360]:
-    for _ in [3,4,6,20,100,360]:
-        angle = 360/s
-        radians = math.radians(angle * 1)
-        x = xpos + side_length * math.cos(radians)
-        y = ypos + side_length * math.sin(radians)
-        points.append([x,y])
-        pygame.display.flip()
-    pygame.draw.polygon(window, "purple", points)
+#for s in [3,4,6,20,100,360]:
+for i in range(0,num_side,1):
+    angle = 360/num_side
+    radians = math.radians(angle * 1)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
     pygame.display.flip()
-    pygame.time.wait(1000)
-    window.fill("pink")
-    pygame.display.flip()
-    points = []
+pygame.display.flip()
+pygame.time.wait(500)
+pygame.draw.polygon(window, "purple", points, 5)
+pygame.display.flip()
+pygame.time.wait(500)
+window.fill("pink")
+pygame.display.flip()
+points = []
