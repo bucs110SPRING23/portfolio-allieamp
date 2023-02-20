@@ -59,7 +59,7 @@ for num_sides in [3,4,6,20,100,360]:
         y = ypos + side_length * math.sin(radians)
         points.append([x,y])
     print(num_sides)
-    pygame.draw.polygon(window, "black", points)
+    pygame.draw.polygon(window, "purple", points)
     pygame.display.flip()
     pygame.time.wait(5000)
     window.fill("pink")
