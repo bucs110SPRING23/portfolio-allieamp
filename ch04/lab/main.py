@@ -11,7 +11,6 @@ pygame.display.flip()
 pygame.draw.line(screen,"black",(250,0),(250,500))
 pygame.draw.line(screen,"black",(0,250),(500,250))
 pygame.display.flip()
-pygame.time.wait(2000)
 
 player1_score = int(0)
 player2_score = int(0)
