@@ -6,6 +6,6 @@ star_pyramid()
 
 def rstar_pyramid():
     rows = int((input("Set number of rows:")))
-    for i in range(rows+1,1,-1):
+    for i in range(rows,0,-1):
         print("*" * i) 
 rstar_pyramid()
