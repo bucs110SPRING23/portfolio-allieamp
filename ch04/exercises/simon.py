@@ -81,15 +81,15 @@ while not done: #basically "while true"
                 result.append("purple")
     #We've covered every event we care about
     # 2. updating data
-    # if result and not turns: 
-    #     msg = [
-    #         "You entered:" + str(result),
-    #         "The correct pattern was:" + str(order)
-    #     ]
-    # if result == order:
-    #     msg.append("You won!")
-    # else:
-    #     msg.append("You lost")
+    if result and not turns: 
+        msg = [
+            "You entered:" + str(result),
+            "The correct pattern was:" + str(order)
+        ]
+    if result == order:
+        msg.append("You won!")
+    else:
+        msg.append("You lost")
 
      #3. draw   
     screen.fill("black")
@@ -101,11 +101,11 @@ while not done: #basically "while true"
         pygame.draw.rect(screen,highlight_colors[result[-1]],hitboxes[result[-1]]) #color highlights when you click it
     
     #creates an image for the text for each message
-    # ypos = 60
-    # for m in msg:
-    #     text = font.render(m, True, "white") #creates the text
-    #     screen.blit(text,(20,ypos)) #puts it on screen at that position
-    #     ypos += 60 #acts an indent
+    ypos = 60
+    for m in msg:
+        text = font.render(m, True, "white") #creates the text
+        screen.blit(text,(20,ypos)) #puts it on screen at that position
+        ypos += 60 #acts an indent
 
 pygame.display.flip()
 
