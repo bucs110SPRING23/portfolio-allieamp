@@ -75,7 +75,7 @@ for _ in range(10):
     x_dart = random.randrange(0,width)
     y_dart = random.randrange(0,height)
     distance_from_center = math.hypot(hitbox_width-x_dart, hitbox_height-y_dart)
-    is_in_circle = distance_from_center <= hitbox_width/2
+    is_in_circle = distance_from_center <= hitbox_height
     if is_in_circle == True:
         pygame.draw.circle(screen,"green",(x_dart,y_dart),5)
         player1_score = player1_score + 1
@@ -86,7 +86,7 @@ for _ in range(10):
     x_dart = random.randrange(0,width)
     y_dart = random.randrange(0,height)
     distance_from_center = math.hypot(hitbox_width-x_dart, hitbox_height-y_dart)
-    is_in_circle = distance_from_center <= hitbox_width/2
+    is_in_circle = distance_from_center <= hitbox_height
     if is_in_circle == True:
         pygame.draw.circle(screen,"purple",(x_dart,y_dart),5)
         player2_score = player2_score + 1

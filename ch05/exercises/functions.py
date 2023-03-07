@@ -13,10 +13,10 @@ for _ in range(3):
     c = int(input(": "))
     find_max(a,b,c)
 
-def foo(var):
-    var +=1
+def foo(var): #function scope uses var temporarily by does not change it fundamentaly
+    var +=1 #using the same name as a globla variable called shadowing
     print(var)
 
 var = 5
-foo(var)
-print(var)
+foo(var) #prints the var affected by the function foo
+print(var) #prints the set var
