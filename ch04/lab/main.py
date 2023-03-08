@@ -121,4 +121,3 @@ else:
     screen.blit(text, (hitbox_width, hitbox_height+100))
 pygame.display.flip()
 pygame.time.wait(1000)
-print(bet == winner)
