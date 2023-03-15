@@ -1,7 +1,6 @@
 import pygame
+FACTOR = 30
 def main():
-    pygame.init()
-    screen = pygame.display.set_mode()
     def threenp1(n):
         count = 0
         while n > 1.0:
@@ -16,28 +15,37 @@ def main():
         objs_in_sequence = {}
         for i, k in enumerate(my_range):
             threenp1(i)
-            objs_in_sequence[k] = threenp1(k)        
+            objs_in_sequence[k] = threenp1(k)            
         return objs_in_sequence
-    upper_limit = int(input("Set upper limit:"))
+    def graph_coordinates(result):
+        coordinates = {}
+        for k,v in result.items():
+            coordinates[k*FACTOR] = v*FACTOR
+        if len(result) >= 2:
+            pygame.draw.lines(screen, "blue", True, list(coordinates.items()))
+    def maximum(upper_limit):
+        max_so_far = 2
+        for k,v in upper_limit.items():
+            if v >= upper_limit[max_so_far]: 
+                max_so_far = k
+        return max_so_far
+    
+    pygame.init()
+    screen = pygame.display.set_mode()
+    screen.fill("white")
+    upper_limit = int(10)
     result = threenp1range(upper_limit)
     print(result)
-    
-    def graph_coordinates(result):
-        coordinates = [result]
-        pygame.draw.lines(screen, "blue", True, coordinates)
+
     graph_coordinates(result)
+    width, height = screen.get_size()
     new_screen = pygame.transform.flip(screen, False, True)
-    width, height = new_screen.get_size()
-    new_screen = pygame.transform.scale(new_screen, (width * 5, height * 5))
-    screen.blit(new_screen, (0, 0))
-    max_so_far = 0 
-    if threenp1() > max_so_far:
-        max_so_far = threenp1()
-    else: 
-        max_so_far = max_so_far
+
+    max_so_far = str(maximum(result))
     font = pygame.font.Font(None,48)
     msg = font.render(max_so_far, True, "blue")
-    screen.blit(msg, (10,10))
+    new_screen.blit(msg, (10,10))
+    screen.blit(new_screen, (0, 0))
     pygame.display.flip()
     pygame.time.delay(1000)
 
