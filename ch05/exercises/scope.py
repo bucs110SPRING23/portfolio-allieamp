@@ -1,22 +1,23 @@
+def accum_mult(x,y):
+        accumulator = 0
+        for _ in range(y):
+            accumulator = accumulator + x
+        return accumulator
+def accum_exp(x,y):
+    accumulator = 1
+    for _ in range(y):
+        accumulator = accumulator * x
+    return accumulator
+def accum_square(x):
+    accumulator = accum_mult(x,x)
+    return accumulator
 def main():
-    def accum_mult(n):
-        accumulator = start_number
-        for i in range(n-1):
-            accumulator = accumulator + start_number
-        return accumulator
-    def accum_exp(n):
-        accumulator = start_number
-        for i in range(n-1):
-            accumulator = accumulator * start_number
-        return accumulator
-    def accum_square(n):
-        accumulator = accum_exp(2)
-        return accumulator 
-    start_number = int(input("input start number:"))
-    multiplier = int(input("input multiplier:"))
-    multiplied = accum_mult(multiplier)
-    exponized = accum_exp(multiplier)
-    squared = accum_square(multiplier)
+     
+    x = int(input("input x number:"))
+    y = int(input("input y number:"))
+    multiplied = accum_mult(x,y)
+    exponized = accum_exp(x,y)
+    squared = accum_square(x)
     print(multiplied)
     print(exponized)
     print(squared)
