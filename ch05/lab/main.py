@@ -39,7 +39,7 @@ def main():
     print(result)
 
     graph_coordinates(result)
-    width, height = screen.get_size()
+    screen.get_size()
     new_screen = pygame.transform.flip(screen, False, True)
 
     max_so_far = str(maximum(result))

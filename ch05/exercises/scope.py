@@ -1,4 +1,9 @@
 def accum_mult(x,y):
+        """
+        Multiplies two numbers without using *
+        arg: x (int), x (int)
+        returns: accumulator(int)
+        """
         accumulator = 0
         for _ in range(y):
             accumulator = accumulator + x
@@ -9,10 +14,9 @@ def accum_exp(x,y):
         accumulator = accumulator * x
     return accumulator
 def accum_square(x):
-    accumulator = accum_mult(x,x)
+    accumulator = accum_mult(x,2)
     return accumulator
 def main():
-     
     x = int(input("input x number:"))
     y = int(input("input y number:"))
     multiplied = accum_mult(x,y)
@@ -21,5 +25,8 @@ def main():
     print(multiplied)
     print(exponized)
     print(squared)
+    print(accum_mult.__doc__)
+
+    
 main()
 
