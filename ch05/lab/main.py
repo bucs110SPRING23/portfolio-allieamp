@@ -1,5 +1,6 @@
 import pygame
 FACTOR = 35
+#CHECKING SUBMISSION
 def threenp1(n):
     count = 0
     while n > 1.0:
