@@ -8,11 +8,13 @@ def angle(sides=6):
     """
     angle = 360/sides
     return angle  
- 
+
 def main():
     #set up
     franklin = turtle.Turtle()
     franklin.shape("turtle")
+    franklin.pensize(8)
+    franklin.speed(8)
     franklin.color("black")
     hexangle = angle(sides=6)
     length = 60
