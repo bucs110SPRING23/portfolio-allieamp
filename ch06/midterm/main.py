@@ -17,7 +17,7 @@ def main():
     franklin.speed(8)
     franklin.color("black")
     hexangle = angle(sides=6)
-    length = 60
+    length = 50
     
     #drawing circle
     for _ in range(40):
