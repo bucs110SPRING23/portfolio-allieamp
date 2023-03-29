@@ -18,7 +18,7 @@ def cipher(text):
     return result
 def main():
     result = cipher("The quick brown fox jumps over the lazy dog")
-    fptr = open("encrypted.txt.txt", "w")
+    fptr = open("encrypted.txt", "w")
     fptr.write(result)
     fptr.close()
 main()

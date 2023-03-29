@@ -7,7 +7,7 @@ def main():
             accumulator += 1
     fptr.close()
 
-    fptr = open(filename+".dat", "w")
+    fptr = open(filename+".dat", "w") #creates new file so we're not writing over the other
     fptr.write(str(accumulator) + " characters")
     fptr.close()
 
