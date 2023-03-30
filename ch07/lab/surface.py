@@ -6,7 +6,7 @@ class Surface:
     def getRect(self):
         """
         This  returns the internal Rectangle attribute from surface
-        args: self as surface class
+        args: self as Surface class
         return: self.rect as a Rectangle object
         """
         return self.rect

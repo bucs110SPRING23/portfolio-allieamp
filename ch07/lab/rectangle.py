@@ -8,6 +8,6 @@ class Rectangle:
         """
         This returns a string containing the x, y, width, and height of the rectangle
         args: self as Rectangle class
-        return: ((x,y),height,width) as a string
+        return: ((x,y),height,width) as a string from Rectangle class
         """
         return ((self.x,self.y), self.height,self.width)
