@@ -7,7 +7,7 @@ class Rectangle:
     def __str__(self):
         """
         This returns a string containing the x, y, width, and height of the rectangle
-        args: self
+        args: self as Rectangle class
         return: ((x,y),height,width) as a string
         """
         return ((self.x,self.y), self.height,self.width)
