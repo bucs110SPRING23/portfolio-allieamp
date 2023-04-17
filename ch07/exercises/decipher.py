@@ -4,7 +4,7 @@ def decipher(text):
     args: text(str) is the message to decrypt
     return: result(str) is the decrypted message
     """
-    text = "Lzw imauc tjgof xgp bmehk gnwj lzw dsrq vgy"
+
     phrase = "The quick brown fox jumps over the lazy dog"
     for i in range(0,27):
         result = ""
@@ -18,9 +18,10 @@ def decipher(text):
             break
     return result
 def main():
-    fptr = open("ch07/exercises/encrypted-#B00885383.txt","r")
-    result = decipher(fptr)
-    fptr = open("ch07/exercises/decrypted.txt", "w")
+    fptr = open("encrypted-#B00885383.txt","r")
+    result = decipher(fptr.read())
+    print(result)
+    fptr = open("decrypted.txt", "w")
     fptr.write(result)
     fptr.close()    
 
