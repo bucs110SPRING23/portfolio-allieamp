@@ -44,10 +44,9 @@ class StringUtility:
         args: self [str] refers to StringUtility initialization
         return: new_string [str] the orginal string replaces with the "*" or the original string or the unchanges string is 1 or less
         """
-        if len(self.string) > 1:
-            if len(self.string)>1:
-                new_string = self.string[0]+re.sub(self.string[0],"*",self.string[1:])
-            return new_string
+        if len(self.string)>1:
+            new_string = self.string[0]+re.sub(self.string[0],"*",self.string[1:])
+            return new_string            
         else:
             return self.string
         

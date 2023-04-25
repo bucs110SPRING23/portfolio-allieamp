@@ -27,7 +27,7 @@ def main():
         print(f"{s}, got: {result}, expected: {expected_results[i]}")
         assert(result == expected_results[i])
         i += 1
-        print("=========== ...vowels method passed ===========")
+    print("=========== ...vowels method passed ===========")
 
     print("=========== Testing bothEnds method... ===========")
     expected_results = ["inng", "aark", "aaaa", "aeOU", "a  z", '']
@@ -37,7 +37,7 @@ def main():
         print(f"{s}, got: {result}, expected: {expected_results[i]}")
         assert(result == expected_results[i])
         i += 1
-        print("=========== ...bothEnds method passed ===========")
+    print("=========== ...bothEnds method passed ===========")
 
     print("=========== Testing fixStart method... ===========")
     expected_results = ["interest*ng", "a*rdv*rk", "a**", "aeiouAEIOU", "a b c d e f g h i j k l m n o p q r s t u v w x y z", '']
