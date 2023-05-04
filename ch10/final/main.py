@@ -14,7 +14,3 @@ def main():
     print("There are",len(dlist),"characters in Disney Films")
 
 main()
-
-#Questions
-##Is it concerningthat it takes a while?
-##Can you give me a sense of if I need more for uniqueness?

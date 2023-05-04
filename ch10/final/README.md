@@ -1,8 +1,8 @@
 # CS110 Final Exam
 
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
-    My code pulls from an API of all Harry Potter characters and all disney characters. All of the 
-    Disney characters with credited films are counted and all Harry POtter characters are counted 
+    My code pulls from an API of all Harry Potter characters and all Disney characters. All of the 
+    Disney characters with credited films are counted and all Harry Potter characters are counted 
     to return how many characters are in each film franchise.
 
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
