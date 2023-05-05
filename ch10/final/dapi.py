@@ -8,7 +8,7 @@ class DAPI:
         '''
         self.baseurl = "https://api.disneyapi.dev/"
         self.endpoint = 'character'
-    def get(self,page):
+    def get(self,page=1):
         '''
         collects the API url you want to use and reuests it as json formay
         args: (int) page is the current page of the API data that you want to use
@@ -40,7 +40,7 @@ class DAPI:
                 'films': item['films']
             }
             if item['films'] == []:
-                pass
+                charlist = charlist
             else:
                 charlist.append(char)
         return charlist

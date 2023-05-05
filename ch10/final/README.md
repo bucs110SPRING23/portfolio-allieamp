@@ -14,5 +14,5 @@
     https://www.youtube.com/watch?v=-oPuGc05Lxs
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
-    Thank you so much for being so patient and kind with us begginers!
+    Thank you so much for being so patient with us this has been a great semester!
 
